@@ -29,12 +29,29 @@ module.exports = function(grunt){
           ext: '.css'
         }]
       }
+    },
+    watch: {
+      options: {
+        livereload: true
+      },
+      scripts: {
+        files: ['js/*.js'],
+        tasks: ['uglify', 'sass', 'cssmin'],
+        options: {
+          spawn: false,
+        }
+      },
+      css: {
+        files: ['public/scss/*.scss'],
+        tasks: ['uglify', 'sass', 'cssmin']
+      }
     }
   });
   /* See answer to SASS here: http://stackoverflow.com/questions/39555122/sass-installation-issues*/
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-  grunt.registerTask('default', ['uglify', 'sass', 'cssmin']);
+  grunt.registerTask('default', ['watch','uglify', 'sass', 'cssmin']);
 }
