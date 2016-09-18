@@ -39,6 +39,9 @@ jspm_packages
 js
 css
 
+#hide compiled css file
+build/style.css
+
 # Optional npm cache directory
 .npm
 
