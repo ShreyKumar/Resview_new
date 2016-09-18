@@ -35,6 +35,10 @@ build/Release
 node_modules
 jspm_packages
 
+#js and css secret files
+js
+css
+
 # Optional npm cache directory
 .npm
 
