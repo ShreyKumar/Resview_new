@@ -37,10 +37,10 @@ jspm_packages
 
 #js and css secret files
 js
-css
+scss
 
 #hide compiled css file
-build/style.css
+build/css
 
 # Optional npm cache directory
 .npm
